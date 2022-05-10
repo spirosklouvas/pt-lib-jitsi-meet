@@ -133,6 +133,7 @@ export default class SpeakerStatsCollector {
 
         if (savedUser) {
             savedUser.addFacialExpression(data.facialExpression, data.duration);
+            savedUser.setLastFacialExpression(data.facialExpression);
         }
     }
 

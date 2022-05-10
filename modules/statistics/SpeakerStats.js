@@ -33,6 +33,7 @@ class SpeakerStats {
             disgusted: 0,
             sad: 0
         };
+        this._lastFacialExpression = 'INITIAL_LAST_FACIAL_EXPRESSION';
     }
 
     /**
@@ -162,6 +163,14 @@ class SpeakerStats {
      */
     addFacialExpression(facialExpression, duration) {
         this._facialExpressions[facialExpression] += duration;
+    }
+
+    getLastFacialExpression() {
+        return this._lastFacialExpression;
+    }
+
+    setLastFacialExpression(facialExpression) {
+        this._lastFacialExpression = facialExpression;
     }
 }
 

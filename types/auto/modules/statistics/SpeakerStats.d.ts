@@ -32,6 +32,7 @@ declare class SpeakerStats {
         disgusted: number;
         sad: number;
     };
+    _lastFacialExpression: string;
     /**
      * Get the user id being tracked.
      *
@@ -111,4 +112,6 @@ declare class SpeakerStats {
      * @param {number} duration
      */
     addFacialExpression(facialExpression: string, duration: number): void;
+    getLastFacialExpression(): string;
+    setLastFacialExpression(facialExpression: any): void;
 }
