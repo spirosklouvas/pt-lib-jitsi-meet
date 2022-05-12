@@ -132,7 +132,9 @@ export default class SpeakerStatsCollector {
         const savedUser = this.stats.users[userId];
 
         if (savedUser) {
-            savedUser.addFacialExpression(data.facialExpression, data.duration);
+            if (data.facialExpression != "unknown") {
+                savedUser.addFacialExpression(data.facialExpression, data.duration);
+            }
             savedUser.setLastFacialExpression(data.facialExpression);
         }
     }
